@@ -7,7 +7,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 
 *{
@@ -269,6 +269,8 @@ onkeyup="searchDestination()">
 </section>
 
 
+
+
 <div class="container">
 
 <h2 class="heading">Popular Destinations</h2>
@@ -282,7 +284,9 @@ onkeyup="searchDestination()">
 <h3>Goa 🏖️</h3>
 <p>Beach • Adventure</p>
 <p><strong>Budget:</strong> ₹10,000</p>
-<button onclick="show('Goa')">View Details</button>
+<a href="goa.html" class="btn btn-primary">
+    View Details
+</a>
 </div>
 </div>
 </div>
@@ -294,7 +298,9 @@ onkeyup="searchDestination()">
 <h3>Manali ⛰️</h3>
 <p>Mountain • Nature</p>
 <p><strong>Budget:</strong> ₹15,000</p>
-<button onclick="show('Manali')">View Details</button>
+<a href="manali.html" class="btn btn-primary">
+    View Details
+</a>
 </div>
 </div>
 </div>
@@ -306,7 +312,9 @@ onkeyup="searchDestination()">
 <h3>Kerala 🌴</h3>
 <p>Nature • Relax</p>
 <p><strong>Budget:</strong> ₹12,000</p>
-<button onclick="show('Kerala')">View Details</button>
+<a href="kerala.html" class="btn btn-primary">
+    View Details
+</a>
 </div>
 </div>
 </div>
@@ -318,7 +326,9 @@ onkeyup="searchDestination()">
 <h3>Ooty 🌲</h3>
 <p>Hill Station • Nature</p>
 <p><strong>Budget:</strong> ₹8,000</p>
-<button onclick="show('Ooty')">View Details</button>
+<a href="ooty.html" class="btn btn-primary">
+    View Details
+</a>
 </div>
 </div>
 </div>
@@ -330,7 +340,9 @@ onkeyup="searchDestination()">
 <h3>Jaipur 🏰</h3>
 <p>Historical • Culture</p>
 <p><strong>Budget:</strong> ₹11,000</p>
-<button onclick="show('Jaipur')">View Details</button>
+<a href="jaipur.html" class="btn btn-primary">
+    View Details
+</a>
 </div>
 </div>
 </div>
@@ -342,7 +354,9 @@ onkeyup="searchDestination()">
 <h3>Paris 🗼</h3>
 <p>Luxury • Romance</p>
 <p><strong>Budget:</strong> ₹80,000</p>
-<button onclick="show('Paris')">View Details</button>
+<a href="paris.html" class="btn btn-primary">
+    View Details
+</a>
 </div>
 </div>
 </div>
@@ -381,67 +395,6 @@ card.style.display="none";
 });
 
 }
-
-function show(place){
-
-let box=document.getElementById("details");
-
-if(place==="Goa"){
-box.innerHTML=`
-<h4>Goa 🏖️</h4>
-<p><strong>Best Time:</strong> October - March</p>
-<p><strong>Attractions:</strong> Baga Beach, Fort Aguada</p>
-<p><strong>Activities:</strong> Water Sports, Sightseeing</p>
-`;
-}
-
-else if(place==="Manali"){
-box.innerHTML=`
-<h4>Manali ⛰️</h4>
-<p><strong>Best Time:</strong> November - February</p>
-<p><strong>Attractions:</strong> Solang Valley, Rohtang Pass</p>
-<p><strong>Activities:</strong> Trekking, Snow Sports</p>
-`;
-}
-
-else if(place==="Kerala"){
-box.innerHTML=`
-<h4>Kerala 🌴</h4>
-<p><strong>Best Time:</strong> September - March</p>
-<p><strong>Attractions:</strong> Munnar, Alleppey, Wayanad</p>
-<p><strong>Activities:</strong> Houseboat Ride, Nature Walks</p>
-`;
-}
-
-else if(place==="Ooty"){
-box.innerHTML=`
-<h4>Ooty 🌲</h4>
-<p><strong>Best Time:</strong> October - June</p>
-<p><strong>Attractions:</strong> Botanical Garden, Ooty Lake</p>
-<p><strong>Activities:</strong> Boating, Sightseeing</p>
-`;
-}
-
-else if(place==="Jaipur"){
-box.innerHTML=`
-<h4>Jaipur 🏰</h4>
-<p><strong>Best Time:</strong> October - March</p>
-<p><strong>Attractions:</strong> Hawa Mahal, Amber Fort</p>
-<p><strong>Activities:</strong> Heritage Tours, Shopping</p>
-`;
-}
-
-else if(place==="Paris"){
-box.innerHTML=`
-<h4>Paris 🗼</h4>
-<p><strong>Best Time:</strong> April - June</p>
-<p><strong>Attractions:</strong> Eiffel Tower, Louvre Museum</p>
-<p><strong>Activities:</strong> River Cruise, Sightseeing</p>
-`;
-}
-
-}
-
 </script>
 
 </body>
