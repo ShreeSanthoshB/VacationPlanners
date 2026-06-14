@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Vacation_Planners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
+
+
+    <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.top-bar{
+            background-color:#2f2d45;
+            color:white;
+            height:35px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 50px;
+            font-size:15px;
+            font-weight: bold;
+        }
+
+        .left,
+        .right{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .left span i,
+        .right i{
+            margin-right:6px;
+        }
+
+        .right i{
+            cursor:pointer;
+        }
+
+        .right i:hover{
+            color:#f18407;
+        }
+
+
+nav {
+        font-family: 'Poppins', sans-serif;
+        background-color: white;
+        height: 130px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    } 
+
+    .logo img{
+        width: 130px;
+        }
+
+    .menu{
+        list-style:none;
+        display:flex;
+        gap:40px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #666;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+
+    .menu li a:hover{
+        
+        color:#f18407;
+        text-decoration: underline;
+        transition: all 0.6s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .trip-highlights h1 {
+    display: inline-block;
+    margin: 0 auto 30px;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    color: white;
+    font-size: 42px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 12px;
+    backdrop-filter: blur(8px); /* Optional glass effect */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.trip-highlights {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #f18407;
+    box-shadow: 0 12px 30px rgba(241, 132, 7, 0.4);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.card strong {
+    color: #1f2937;
+}
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+    <div class="left">
+        <span><i class="fas fa-phone"></i> +91-6374269583</span>
+        <span><i class="fas fa-envelope"></i> contact@vacationplanners.in</span>
+    </div>
+
+    <div class="right">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+</div>
+
+<nav>
+
+    <div class="logo">
+        <img src="https://vacationplanners.in/wp-content/uploads/2024/03/vacation_planners-removebg-preview.png" alt="Vacation Planners">
+    </div>
+
+    <ul class="menu">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="destinationshowcase.html">Destination</a></li>
+        <li><a href="TravelItineraryPlanner.html">Planner</a></li>
+        <li><a href="triphighlights.html">Highlights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <section class="trip-highlights">
+    <h1>Trip Highlights</h1>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h2>🌴 Goa</h2>
+            <p><strong>📍 Attractions:</strong> Baga Beach, Fort Aguada</p>
+            <p><strong>🍴 Cuisine:</strong> Goan Fish Curry, Bebinca</p>
+            <p><strong>🎉 Festival:</strong> Goa Carnival</p>
+            <p><strong>🌄 Scenic View:</strong> Dudhsagar Falls</p>
+            <p><strong>🛍️ Shopping:</strong> Anjuna Flea Market</p>
+            <p><strong>📸 Photo Spot:</strong> Chapora Fort</p>
+        </div>
+
+        <div class="card">
+            <h2>🏔️ Manali</h2>
+            <p><strong>📍 Attractions:</strong> Hadimba Temple, Solang Valley</p>
+            <p><strong>🍴 Cuisine:</strong> Siddu, Trout Fish</p>
+            <p><strong>🎉 Festival:</strong> Winter Carnival</p>
+            <p><strong>🌄 Scenic View:</strong> Rohtang Pass</p>
+            <p><strong>🛍️ Shopping:</strong> Mall Road</p>
+            <p><strong>📸 Photo Spot:</strong> Jogini Falls</p>
+        </div>
+
+        <div class="card">
+            <h2>🌿 Kerala</h2>
+            <p><strong>📍 Attractions:</strong> Munnar, Alleppey</p>
+            <p><strong>🍴 Cuisine:</strong> Appam & Stew</p>
+            <p><strong>🎉 Festival:</strong> Onam</p>
+            <p><strong>🌄 Scenic View:</strong> Backwaters</p>
+            <p><strong>🛍️ Shopping:</strong> Spice Markets</p>
+            <p><strong>📸 Photo Spot:</strong> Houseboats</p>
+        </div>
+
+        <div class="card">
+            <h2>🚂 Ooty</h2>
+            <p><strong>📍 Attractions:</strong> Botanical Garden</p>
+            <p><strong>🍴 Cuisine:</strong> Homemade Chocolates</p>
+            <p><strong>🎉 Festival:</strong> Tea Festival</p>
+            <p><strong>🌄 Scenic View:</strong> Doddabetta Peak</p>
+            <p><strong>🛍️ Shopping:</strong> Charring Cross</p>
+            <p><strong>📸 Photo Spot:</strong> Ooty Lake</p>
+        </div>
+
+        <div class="card">
+            <h2>🏰 Jaipur</h2>
+            <p><strong>📍 Attractions:</strong> Hawa Mahal, Amber Fort</p>
+            <p><strong>🍴 Cuisine:</strong> Dal Baati Churma</p>
+            <p><strong>🎉 Festival:</strong> Teej Festival</p>
+            <p><strong>🌄 Scenic View:</strong> Nahargarh Fort</p>
+            <p><strong>🛍️ Shopping:</strong> Johari Bazaar</p>
+            <p><strong>📸 Photo Spot:</strong> Jal Mahal</p>
+        </div>
+
+        <div class="card">
+            <h2>🗼 Paris</h2>
+            <p><strong>📍 Attractions:</strong> Eiffel Tower, Louvre Museum</p>
+            <p><strong>🍴 Cuisine:</strong> Croissants, Crêpes</p>
+            <p><strong>🎉 Festival:</strong> Bastille Day</p>
+            <p><strong>🌄 Scenic View:</strong> Seine River</p>
+            <p><strong>🛍️ Shopping:</strong> Champs-Élysées</p>
+            <p><strong>📸 Photo Spot:</strong> Trocadéro</p>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

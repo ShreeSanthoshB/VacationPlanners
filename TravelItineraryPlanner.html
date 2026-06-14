@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Itinerary Planner</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.top-bar{
+            background-color:#2f2d45;
+            color:white;
+            height:35px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 50px;
+            font-size:15px;
+            font-weight: bold;
+        }
+
+        .left,
+        .right{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .left span i,
+        .right i{
+            margin-right:6px;
+        }
+
+        .right i{
+            cursor:pointer;
+        }
+
+        .right i:hover{
+            color:#f18407;
+        }
+nav {
+        font-family: 'Poppins', sans-serif;
+        background-color: white;
+        height: 130px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    } 
+
+    .logo img{
+        width: 130px;
+        }
+
+    .menu{
+        list-style:none;
+        display:flex;
+        gap:40px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #666;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+
+    .menu li a:hover{
+        
+        color:#f18407;
+        text-decoration: underline;
+        transition: all 0.6s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .container{
+    width: 60%;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.4 );
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+    h1{
+        text-align:center;
+        color:#2f2d45;
+    }
+
+    label{
+    display:block;
+    margin-top:15px;
+    font-weight:600;
+    font-family:'Poppins', sans-serif;
+}
+
+    input,select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:16px;
+    font-family:'Poppins', sans-serif;
+}
+
+    button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    background:#f18407;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+}
+
+    button:hover{
+        background:#d96f00;
+    }
+
+    #result{
+    margin-top:30px;
+    background:#eef7ff;
+    padding:20px;
+    border-radius:8px;
+    font-family:'Poppins', sans-serif;
+}
+
+    ul{
+        line-height:1.8;
+    }
+
+    #budgetResult{
+    margin-top:30px;
+    background: rgba(238, 247, 255, 0.7);
+    padding:20px;
+    border-radius:10px;
+    font-family:'Poppins', sans-serif;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="left">
+        <span><i class="fas fa-phone"></i> +91-6374269583</span>
+        <span><i class="fas fa-envelope"></i> contact@vacationplanners.in</span>
+    </div>
+
+    <div class="right">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+</div>
+
+<nav>
+
+    <div class="logo">
+        <img src="https://vacationplanners.in/wp-content/uploads/2024/03/vacation_planners-removebg-preview.png" alt="Vacation Planners">
+    </div>
+
+    <ul class="menu">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="destinationshowcase.html">Destination</a></li>
+        <li><a href="TravelItineraryPlanner.html">Planner</a></li>
+        <li><a href="triphighlights.html">Highlights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+<h1>Travel Itinerary Planner</h1>
+
+<label>Destination</label>
+<select id="destination">
+    <option>Goa</option>
+    <option>Manali</option>
+    <option>Kerala</option>
+    <option>Ooty</option>
+    <option>Jaipur</option>
+    <option>Paris</option>
+</select>
+
+<label>Number of Days</label>
+<input type="number" id="days" min="1" value="3">
+
+<label>Travel Date</label>
+<input type="date" id="date">
+
+<label>Number of Travelers</label>
+<input type="number" id="travelers" min="1" value="2">
+
+<button onclick="generatePlan()">Generate Itinerary</button>
+
+<div id="result"></div>
+
+</div>
+
+<div id="result"></div>
+<hr style="margin:40px 0;">
+
+<h1>Trip Budget Estimation</h1>
+
+
+<button onclick="calculateBudget()">
+    Calculate Estimated Budget
+</button>
+
+<div id="budgetResult"></div>
+
+<script>
+
+const itineraries = {
+
+Goa:[
+"Day 1: Arrival, Calangute Beach & Sunset",
+"Day 2: Fort Aguada, Baga Beach & Water Sports",
+"Day 3: Dudhsagar Falls & Spice Plantation",
+"Day 4: Old Goa Churches & River Cruise",
+"Day 5: Shopping at Panjim & Departure"
+],
+
+Manali:[
+"Day 1: Arrival & Mall Road",
+"Day 2: Solang Valley Adventure",
+"Day 3: Rohtang Pass Excursion",
+"Day 4: Hadimba Temple & Local Market",
+"Day 5: Departure"
+],
+
+Kerala:[
+"Day 1: Kochi Sightseeing",
+"Day 2: Munnar Tea Gardens",
+"Day 3: Thekkady Wildlife Sanctuary",
+"Day 4: Alleppey Houseboat Cruise",
+"Day 5: Kovalam Beach & Departure"
+],
+
+Ooty:[
+"Day 1: Botanical Garden & Lake",
+"Day 2: Doddabetta Peak & Tea Museum",
+"Day 3: Toy Train Ride",
+"Day 4: Pykara Falls & Boating",
+"Day 5: Shopping & Departure"
+],
+
+Jaipur:[
+"Day 1: City Palace & Hawa Mahal",
+"Day 2: Amber Fort & Jal Mahal",
+"Day 3: Jantar Mantar & Shopping",
+"Day 4: Nahargarh Fort",
+"Day 5: Departure"
+],
+
+Paris:[
+"Day 1: Eiffel Tower & Seine Cruise",
+"Day 2: Louvre Museum & Notre-Dame",
+"Day 3: Palace of Versailles",
+"Day 4: Champs-Élysées & Arc de Triomphe",
+"Day 5: Shopping & Departure"
+]
+
+};
+
+function generatePlan(){
+
+let destination=document.getElementById("destination").value;
+let days=parseInt(document.getElementById("days").value);
+let date=document.getElementById("date").value;
+let travelers=document.getElementById("travelers").value;
+
+let schedule=itineraries[destination];
+
+let output="<h2>Your Travel Plan</h2>";
+
+output+="<p><strong>Destination:</strong> "+destination+"</p>";
+output+="<p><strong>Travel Date:</strong> "+date+"</p>";
+output+="<p><strong>Travelers:</strong> "+travelers+"</p>";
+
+output+="<h3>Suggested Itinerary</h3><ul>";
+
+for(let i=0;i<days && i<schedule.length;i++){
+    output+="<li>"+schedule[i]+"</li>";
+}
+
+output+="</ul>";
+
+document.getElementById("result").innerHTML=output;
+
+}
+
+function calculateBudget() {
+
+    let destination = document.getElementById("destination").value;
+    let days = parseInt(document.getElementById("days").value);
+    let people = parseInt(document.getElementById("travelers").value);
+
+    // Prices for each destination
+    const prices = {
+        "Goa": {
+            hotel: 2500,
+            food: 900,
+            transport: 1500
+        },
+        "Manali": {
+            hotel: 3000,
+            food: 800,
+            transport: 2000
+        },
+        "Kerala": {
+            hotel: 2800,
+            food: 850,
+            transport: 1800
+        },
+        "Ooty": {
+            hotel: 2200,
+            food: 700,
+            transport: 1200
+        },
+        "Jaipur": {
+            hotel: 2600,
+            food: 750,
+            transport: 1500
+        },
+        "Paris": {
+            hotel: 12000,
+            food: 3500,
+            transport: 5000
+        }
+    };
+
+    let hotelCost = prices[destination].hotel * days;
+    let foodCost = prices[destination].food * days * people;
+    let transportCost = prices[destination].transport;
+
+    let totalCost = hotelCost + foodCost + transportCost;
+
+    document.getElementById("budgetResult").innerHTML = `
+        <h2>Estimated Budget for ${destination}</h2>
+        <p><strong>Hotel:</strong> ₹${prices[destination].hotel}/day × ${days} days = ₹${hotelCost.toLocaleString()}</p>
+        <p><strong>Food:</strong> ₹${prices[destination].food}/person/day × ${people} travelers × ${days} days = ₹${foodCost.toLocaleString()}</p>
+        <p><strong>Transport:</strong> ₹${transportCost.toLocaleString()}</p>
+        <hr>
+        <h2 style="color:#f18407;">
+            Total Estimated Cost: ₹${totalCost.toLocaleString()}
+        </h2>
+    `;
+}
+
+</script>
+
+</body>
+</html>

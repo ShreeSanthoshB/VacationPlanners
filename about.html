@@ -1,0 +1,274 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vacation_Planners</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <style>
+            body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+        .top-bar{
+            background-color:#2f2d45;
+            color:white;
+            height:35px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 50px;
+            font-size:15px;
+            font-weight: bold;
+        }
+
+        .left,
+        .right{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .left span i,
+        .right i{
+            margin-right:6px;
+        }
+
+        .right i{
+            cursor:pointer;
+        }
+
+        .right i:hover{
+            color:#f18407;
+        }
+
+        nav {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            height: 130px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        .logo img{
+            width: 130px;
+            }
+
+        .menu{
+            list-style:none;
+            display:flex;
+            gap:40px;
+        }
+
+        .menu li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+        .menu li a:hover{
+            color:#f18407;
+            text-decoration: underline;
+            transition: all 0.6s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 11%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 1;
+        }
+
+        .ab1 {
+            display: flex;
+            align-items: center;   
+            gap: 50px;             
+            margin: 100px;
+        }
+
+        .ab1 img {
+            width: 450px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .ab1 .text {
+            flex: 1;
+        }
+
+        .ab1 .text p {
+            font-size: 18px;
+            color: gray;
+        }
+
+        .ab1 .text h1 {
+            font-size: 40px;
+        }
+
+        .ab1 .text h2{
+            font-size: 20px;
+            color: gray;
+            font-weight: lighter;
+        }
+
+        .ab2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .ab2 h2 {
+            margin-left: 100px;
+            font-size: 20px;
+            color: gray;
+            font-weight: lighter;
+        }
+
+        .ab2 img {
+            margin-right: 100px;
+            width: 35%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .stats-bar {
+        margin-top: 80px;
+        background: linear-gradient(135deg, #2f2d45, #454267);
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 50px 20px;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .stat h1 {
+        font-size: 55px;
+        margin: 0;
+        color: #f18407;
+        font-weight: bold;
+    }  
+
+    .stat p {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .stat {
+        transition: transform 0.3s ease;
+    }
+
+    .stat:hover {
+        transform: translateY(-8px);
+    }
+
+</style>
+</head>
+    <body>
+        <div class="top-bar">
+        <div class="left">
+            <span><i class="fas fa-phone"></i> +91-6374269583</span>
+            <span><i class="fas fa-envelope"></i> contact@vacationplanners.in</span>
+        </div>
+
+        <div class="right">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+    <nav>
+
+        <div class="logo">
+            <img src="https://vacationplanners.in/wp-content/uploads/2024/03/vacation_planners-removebg-preview.png" alt="Vacation Planners">
+        </div>
+
+        <ul class="menu">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinationshowcase.html">Destination</a></li>
+            <li><a href="TravelItineraryPlanner.html">Planner</a></li>
+            <li><a href="triphighlights.html">Highlights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <img id="heroImg" src="https://images.unsplash.com/photo-1636109447278-1126f47644a3?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vbm9jaHJvbWF0aWN8ZW58MHx8MHx8fDA%3D" alt="Hero Banner">
+        <div class="hero-text">
+            <h2 style="color: rgb(255, 255, 255);font-size: 45px;">About</h2>
+        </div>
+    </section>
+    <section class="ab1">
+        <img src="https://vacationplanners.in/wp-content/uploads/2024/03/domestic-tour-package1.jpg" alt="image">
+        <section class="text">
+            <p>Learn about us</p>
+            <h1>Dare to Explore with <br>Vacation Planners</h1>
+            <h2>Welcome to Vacation Planners, where the journey is as extraordinary as the destination! With a rich legacy spanning 15 years, we take immense pride in being your trusted travel companion, transforming your wanderlust into unforgettable experiences. At Vacation Planners, we believe that travel is not just about reaching a destination; it's about the journey, the stories, and the memories that linger long after you return. Established in 2009, our company has been a steadfast guide for countless adventurers, explorers, and dreamers, curating immersive travel experiences that transcend the ordinary.</h2>
+        </section>
+    </section>
+    <section class="ab2">
+        <div class="text">
+            <h2>
+                What sets us apart is not just our extensive experience, but our unwavering commitment to crafting personalized journeys that reflect the unique aspirations of each traveler. Our team of passionate globetrotters and travel experts ensures that every itinerary is thoughtfully designed, promising a seamless blend of adventure, luxury, and cultural enrichment <br><br>
+
+                From the moment you dream of your next getaway to the second you touch down on foreign soil, we are dedicated to making every step of your journey extraordinary. Our partnerships with top-notch accommodations, local guides, and travel experts worldwide enable us to offer you unparalleled access to hidden gems and iconic landmarks alike.<br><br>
+
+                Whether you seek the thrill of an exotic adventure, the tranquility of a beach escape, or the cultural richness of a historical sojourn, Vacation Planners is here to turn your travel dreams into reality. Trust us to handle the details, so you can focus on savoring the moments that make travel truly transformative.<br><br>
+
+                Join us on a voyage that transcends the ordinary, and let Vacation Planners be the compass guiding you to unparalleled experiences, boundless horizons, and a lifetime of cherished memories. Welcome aboard!   
+            </h2>
+        </div>
+
+        <img src="https://vacationplanners.in/wp-content/uploads/2021/10/image-13.jpg" alt="image">
+    </section>
+    <section class="stats-bar">
+    <div class="stat">
+        <i class="fas fa-map-marked-alt" style="font-size:40px;color:#f18407;"></i>
+        <h1>500+</h1>
+        <p>Total Tours Completed</p>
+    </div>
+
+    <div class="stat">
+        <i class="fas fa-bullhorn" style="font-size:40px;color:#f18407;"></i>
+        <h1>150+</h1>
+        <p>Campaigns Closed</p>
+    </div>
+
+    <div class="stat">
+        <i class="fas fa-face-smile" style="font-size:40px;color:#f18407;"></i>
+        <h1>10K+</h1>
+        <p>Happy People</p>
+    </div>
+
+    <div class="stat">
+        <i class="fas fa-users" style="font-size:40px;color:#f18407;"></i>
+        <h1>50+</h1>
+        <p>Our Team</p>
+    </div>
+</section>
+</body>
+</html>
